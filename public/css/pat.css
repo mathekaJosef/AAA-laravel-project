@@ -1,0 +1,20 @@
+body{
+	margin: 50px;
+}
+.form-control{
+	width: 500px;
+}
+#img{
+	max-width: 300px;
+}
+#alert{
+	width: 500px;
+}
+#search{
+	margin-left: 520px;
+	margin-top: -57px;
+	border-radius: 0px 5px 5px 0px;
+}
+#post_name{
+	border-radius: 5px 0px 0px 5px;
+}
