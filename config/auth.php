@@ -44,6 +44,10 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+<<<<<<< HEAD
+=======
+            'hash' => false,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         ],
     ],
 
@@ -96,7 +100,27 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+<<<<<<< HEAD
         ],
     ],
 
+=======
+            'throttle' => 60,
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password Confirmation Timeout
+    |--------------------------------------------------------------------------
+    |
+    | Here you may define the amount of seconds before a password confirmation
+    | times out and the user is prompted to re-enter their password via the
+    | confirmation screen. By default, the timeout lasts for three hours.
+    |
+    */
+
+    'password_timeout' => 10800,
+
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
 ];

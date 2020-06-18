@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
 return [
 
     /*
@@ -11,7 +16,12 @@ return [
     | using this caching library. This connection is used when another is
     | not explicitly specified when executing a given caching function.
     |
+<<<<<<< HEAD
     | Supported: "apc", "array", "database", "file", "memcached", "redis"
+=======
+    | Supported: "apc", "array", "database", "file",
+    |            "memcached", "redis", "dynamodb"
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
     |
     */
 
@@ -36,6 +46,10 @@ return [
 
         'array' => [
             'driver' => 'array',
+<<<<<<< HEAD
+=======
+            'serialize' => false,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         ],
 
         'database' => [
@@ -57,7 +71,11 @@ return [
                 env('MEMCACHED_PASSWORD'),
             ],
             'options' => [
+<<<<<<< HEAD
                 // Memcached::OPT_CONNECT_TIMEOUT  => 2000,
+=======
+                // Memcached::OPT_CONNECT_TIMEOUT => 2000,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
             ],
             'servers' => [
                 [
@@ -70,7 +88,20 @@ return [
 
         'redis' => [
             'driver' => 'redis',
+<<<<<<< HEAD
             'connection' => 'default',
+=======
+            'connection' => 'cache',
+        ],
+
+        'dynamodb' => [
+            'driver' => 'dynamodb',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+            'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
+            'endpoint' => env('DYNAMODB_ENDPOINT'),
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         ],
 
     ],
@@ -86,6 +117,10 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'prefix' => 'laravel',
+=======
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
 
 ];

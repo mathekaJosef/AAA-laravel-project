@@ -24,17 +24,30 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+<<<<<<< HEAD
         // $schedule->command('inspire')
         //          ->hourly();
     }
 
     /**
      * Register the Closure based commands for the application.
+=======
+        // $schedule->command('inspire')->hourly();
+    }
+
+    /**
+     * Register the commands for the application.
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
      *
      * @return void
      */
     protected function commands()
     {
+<<<<<<< HEAD
+=======
+        $this->load(__DIR__.'/Commands');
+
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         require base_path('routes/console.php');
     }
 }

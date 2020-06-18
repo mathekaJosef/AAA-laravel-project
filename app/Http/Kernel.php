@@ -14,7 +14,14 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
+<<<<<<< HEAD
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+=======
+        // \App\Http\Middleware\TrustHosts::class,
+        \App\Http\Middleware\TrustProxies::class,
+        \Fruitcake\Cors\HandleCors::class,
+        \App\Http\Middleware\CheckForMaintenanceMode::class,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
@@ -38,7 +45,11 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
+<<<<<<< HEAD
             'bindings',
+=======
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
         ],
     ];
 
@@ -50,11 +61,24 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+<<<<<<< HEAD
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+=======
+        'auth' => \App\Http\Middleware\Authenticate::class,
+        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'can' => \Illuminate\Auth\Middleware\Authorize::class,
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
+        'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
     ];
 }

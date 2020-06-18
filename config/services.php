@@ -8,15 +8,22 @@ return [
     |--------------------------------------------------------------------------
     |
     | This file is for storing the credentials for third party services such
+<<<<<<< HEAD
     | as Stripe, Mailgun, SparkPost and others. This file provides a sane
     | default location for this type of information, allowing packages
     | to have a conventional place to find your various credentials.
+=======
+    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | location for this type of information, allowing packages to have
+    | a conventional file to locate the various service credentials.
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
     |
     */
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
+<<<<<<< HEAD
     ],
 
     'ses' => [
@@ -33,6 +40,19 @@ return [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
+=======
+        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+    ],
+
+    'postmark' => [
+        'token' => env('POSTMARK_TOKEN'),
+    ],
+
+    'ses' => [
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+>>>>>>> 6298ed4ba9fd6ce8160054c06d19c2729d2e6ca5
     ],
 
 ];
